@@ -1,17 +1,13 @@
-import characters
+import menu
 
-def main():
-    player_character = characters.PlayerCharacter(
-        first_name=characters.create_gangster()[0],
-        last_name=characters.create_gangster()[1],
-        nickname=characters.create_gangster()[2],
-        health=100,
-        weapon="none",
-        currency=100,
-        inventory=["empty"],
-        location="OldTown",
-    )
+def start():"""
+Initializes the game by displaying the main menu.
 
-    print(player_character.__repr__())
+This function calls the main_menu function from the menu module to start
+the game's main interface, allowing the user to navigate through various
+game options."""
+menu.main_menu()
 
-main()
+
+if __name__ == "__main__":
+    start()
