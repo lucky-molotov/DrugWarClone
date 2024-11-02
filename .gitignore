@@ -1,5 +1,6 @@
 # Ignore game test file
 game_test.py
+*.txt
 
 # Python cache files
 __pycache__/
