@@ -19,186 +19,69 @@ def intro_messages(player, loanshark):
     Returns:
     None
     """
-    def version_1_intro(player, loanshark):
-        console.print("[bold magenta]Welcome to Old Town...[/bold magenta]", style="underline")
-        console.print("Where fortunes are made and broken with every step.")
-        console.print(f"[bold red]You've got a problem...[/bold red]")
-        console.print(f"Your debt to the feared loan shark, {loanshark}, is threatening to consume you.")
-        console.print(f"You have 30 days to repay the debt. The streets are watching, and so are {loanshark}'s goons.")
-        console.print("Will you be able to navigate the treacherous underworld of Old Town?")
-        console.print("Or will you become just another statistic in our little neighborhood?")
-        console.print(f"[bold blue]You've found some cash...[/bold blue]")
-        console.print(f"It's not much, but it’s enough to keep you going for now. {monetary_name}")
+    def version_1a_intro(player, loanshark):
+        """A gritty, high-stakes introduction."""
+        console.print(f"[bold red]Old Town's got a new problem...[/bold red]", style="underline")
+        console.print(f"You're it. Your debt to {loanshark.name} {loanshark.nickname} is about to catch up with you.")
+        console.print(f"Thirty days. That's all you've got to turn things around. After that, the loan shark'll be knocking on your door...")
+        console.print(f"The streets are watching, and so are his goons. It's time to make a move or face the consequences.")
+        console.print(f"[bold green]You've got a glimmer of hope...[/bold green]")
+        console.print(f"You've managed to scrounge up {monetary_name}. It's not much, but it's enough to keep you going for now...")
+        console.print(f"Will you be able to navigate the underworld of Old Town and stay one step ahead of your debtors?")
 
-    def version_2_intro(player, loanshark):
-        console.print("[bold magenta]In a world where fortunes are made and broken on the streets of Old Town...[/bold magenta]")
-        console.print(f"You've found yourself at the center of it all.")
-        console.print(f"[bold red]You owe the notorious loan shark, {loanshark}, a debt that could cost you everything.[/bold red]")
-        console.print("Thirty days remain to settle this score before")
-        console.print(f"the weight of your failure crushes you beneath its heel.")
-        console.print("[bold green]But don’t worry...[/bold green]")
-        console.print("You’ve got a small lifeline.")
-        console.print(f"You won the lottery last night, and instead of blowing it all on a quick fix,")
-        console.print("you wisely chose to hang onto a small sum. It might just be enough to keep you afloat.")
 
-    def version_3_intro(player, loanshark):
-        console.print("[bold magenta]The neon lights of Old Town flicker like fireflies on the night...[/bold magenta]")
-        console.print(f"Your name is etched into the annals of this underworld, where fortunes are made and broken with every step.")
-        console.print(f"[bold red]You're in a bind...[/bold red]")
-        console.print("And you know it.")
-        console.print(f"You've managed to talk your way into a high-stakes game of poker with some shady characters.")
-        console.print(f"Against all odds, you came out on top, winning just enough cash to keep your head above water.")
-        console.print("[bold blue]You're still standing...[/bold blue]")
-        console.print("But the goons are closing in.")
+    def version_1b_intro(player, loanshark):
+        """A more mysterious introduction."""
+        console.print(f"[bold purple]The shadows are closing in...[/bold purple]", style="underline")
+        console.print(f"You've been chosen. By the very fabric of Old Town's underworld.")
+        console.print(f"Your debt to {loanshark.name} {loanshark.nickname} is a ticking time bomb...")
+        console.print(f"Thirty days. That's all you've got to defuse it before things get out of hand.")
+        console.print(f"[bold yellow]You've stumbled upon something...[/bold yellow]")
+        console.print(f"A cryptic message, hinting at a way to escape your debt. But can you trust it?")
+        console.print(f"The streets are full of secrets, and so are his goons. You'll need all your wits about you to survive...")
 
-    def version_4_intro(player, loanshark):
-        console.print("[bold magenta]Old Town is a place where danger and opportunity dance together...[/bold magenta]")
-        console.print(f"and {player[0]} knows this all too well.")
-        console.print(f"[bold red]Your debt to the ruthless loan shark, {loanshark}, looms over you like a shadow.[/bold red]")
-        console.print("Thirty days separate you from ruin or redemption.")
-        console.print("[bold green]But fortune has smiled upon you...[/bold green]")
-        console.print(f"However briefly.")
-        console.print(f"You stumbled upon a street magician’s hat—abandoned and filled with coins from an unfinished performance.")
-        console.print(f"You collected the scattered money, enough to give you a fragile lifeline. {monetary_name()}")
+    def version_1c_intro(player, loanshark):
+        """A more fast-paced introduction."""
+        console.print(f"[bold orange]Time's running out...[/bold orange]", style="underline")
+        console.print(f"You've got a debt to {loanshark.name} {loanshark.nickname}, and it's about to catch up with you.")
+        console.print(f"Thirty days. That's all you've got to make some noise, raise some cash...")
+        console.print(f"[bold green]You're in this now...[/bold green]")
+        console.print(f"You've managed to scrounge up {monetary_name}. It's a start, but it won't be enough on its own.")
+        console.print(f"You'll need to move fast, and make some moves. The streets are alive with possibilities...")
 
-    def version_5_intro(player, loanshark):
-        console.print("[bold magenta]You've been to the depths of despair...[/bold magenta]")
-        console.print("The debt you owe to the infamous {loanshark} weighs heavily on your soul,")
-        console.print(f"and you’ve got only 30 days to make things right.")
-        console.print("[bold red]But a stroke of luck has brought you a small break.[/bold red]")
-        console.print("You found a misplaced wallet wedged between the seats of an empty subway car.")
-        console.print(f"[bold blue]Inside were a few crumpled bills and some loose change...[/bold blue]")
-        console.print("It’s not a windfall,")
-        console.print("but it’s enough to give you a fighting chance.")
+
+    def version_1d_intro(player, loanshark):
+        """A more emotional introduction."""
+        console.print(f"[bold pink]Your heart is racing...[/bold pink]", style="underline")
+        console.print(f"You've been through the wringer, {player.name}. Your debt to {loanshark.name} {loanshark.nickname} is a constant reminder...")
+        console.print(f"Thirty days. That's all you've got to turn things around.")
+        console.print(f"[bold blue]You've found a glimmer of hope...[/bold blue]")
+        console.print(f"You've managed to scrounge up {monetary_name}. It's not much, but it's enough to keep you going for now...")
+        console.print(f"Will you be able to find your way out of this darkness, or will the shadows consume you?")
+
+
+    def version_1e_intro(player, loanshark):
+        """A more philosophical introduction."""
+        console.print(f"[bold black]The universe is a cruel joke...[/bold black]", style="underline")
+        console.print(f"You've been dealt a hand, {player.name}. Your debt to {loanshark.name} {loanshark.nickname} is just the beginning.")
+        console.print(f"Thirty days. That's all you've got to find your way in this twisted game...")
+        console.print(f"[bold white]You're on the cusp of something...[/bold white]")
+        console.print(f"You've managed to scrounge up {monetary_name}. It's a start, but what does it truly mean?")
+        console.print(f"The streets are full of meaning, or at least that's what you tell yourself. But can you truly find your place in this chaotic world?")
 
 
     random_version = random.randint(1, 5)
     if random_version == 1:
-        intro = version_1_intro(player, loanshark)
+        intro = version_1a_intro(player, loanshark)
     elif random_version == 2:
-        intro = version_2_intro(player, loanshark)
+        intro = version_1b_intro(player, loanshark)
     elif random_version == 3:
-        intro = version_3_intro(player, loanshark)
+        intro = version_1c_intro(player, loanshark)
     elif random_version == 4:
-        intro = version_4_intro(player, loanshark)
+        intro = version_1d_intro(player, loanshark)
     elif random_version == 5:
-        intro = version_5_intro(player, loanshark)
+        intro = version_1e_intro(player, loanshark)
     return intro
-
-    events = [
-        {
-            "name": "Gray and Oppressive",
-            "description": (
-                "Thick, gray clouds loom low over the city, pressing down with a weight that matches the mood of Old Town. "
-                "The air feels heavy with unspoken secrets, and the faint scent of gasoline lingers. People keep their heads down, "
-                "eyes wary for signs of trouble."
-            )
-        },
-        {
-            "name": "Misty Alleyways",
-            "description": (
-                "A dense, cold mist hangs in the narrow alleyways, shrouding figures that move like ghosts in the fog. "
-                "Streetlights struggle to pierce the gloom, and shadows seem to whisper as they pass. Perfect cover for a deal gone wrong."
-            )
-        },
-        {
-            "name": "Cold and Unforgiving",
-            "description": (
-                "A biting wind cuts through even the thickest of coats, reminding everyone that Old Town is no place for the faint-hearted. "
-                "The cold freezes more than just bones—it chills the ambitions of anyone foolish enough to dream too big."
-            )
-        },
-        {
-            "name": "Light Snow with Footprints",
-            "description": (
-                "Snow falls lightly, covering the city in a thin blanket of white, but footprints don't stay hidden for long. "
-                "Every step leaves a trail that someone might be following, and in a place like this, anonymity melts as quickly as the snow."
-            )
-        },
-        {
-            "name": "Stifling Heat and Suspicion",
-            "description": (
-                "Unseasonable heat makes the air thick, almost suffocating, as if the whole town is sweating out a guilty conscience. "
-                "Cigarette smoke hangs in the air, and tempers are as hot as the pavement. Deals go bad quickly in this kind of weather."
-            )
-        },
-        {
-            "name": "Thunderclouds and Tension",
-            "description": (
-                "Dark thunderclouds gather over Old Town, mirroring the tension in the streets. The threat of a downpour looms, "
-                "and every conversation is cut short by the ominous rumble of distant thunder. Even the bravest enforcers seek cover."
-            )
-        },
-        {
-            "name": "Fogged-In Harbor",
-            "description": (
-                "The harbor is blanketed in a thick, impenetrable fog, hiding cargo ships and shady deals alike. "
-                "Smugglers move with ease in this weather, but for others, every echo carries a hint of danger."
-            )
-        },
-        {
-            "name": "Rain-Slick Streets",
-            "description": (
-                "Heavy rain pounds against the city, washing away the grime but not the sins of Old Town. "
-                "Neon signs reflect in rain-slick streets, and alleyways become treacherous rivers. Only the desperate or the determined are out tonight."
-            )
-        },
-        {
-            "name": "Gloomy and Silent",
-            "description": (
-                "The whole city feels hushed, with an unnatural silence hanging in the air. People speak in whispers, as if afraid the walls might be listening. "
-                "Even the usual sounds of industry are muffled, creating an eerie, uneasy calm."
-            )
-        },
-        {
-            "name": "Brisk and Restless",
-            "description": (
-                "A brisk wind blows through the city, carrying news and rumors faster than a Soviet courier. "
-                "The cold makes people quick and jittery, glancing over their shoulders, always expecting the unexpected."
-            )
-        },
-        {
-            "name": "Slush and Secrets",
-            "description": (
-                "Melting snow mixes with grime, creating a dirty slush that hides more than just mud. "
-                "Papers, cigarette butts, and discarded secrets float in the slushy gutters, and every step is a reminder of how messy life can get."
-            )
-        },
-        {
-            "name": "Heavy Snow and Heavy Hearts",
-            "description": (
-                "Snow falls in thick, heavy flakes, muffling the sounds of the city. It would be beautiful if not for the cold dread that settles in the gut. "
-                "In Old Town, snow is just another cover for things best kept hidden."
-            )
-        },
-        {
-            "name": "Stagnant Air",
-            "description": (
-                "The air is still and stagnant, as if the city itself is holding its breath. There’s no breeze, no relief, only the oppressive feeling "
-                "that something is about to go very wrong. Conversations are quiet, and eyes dart to alleyways where trouble always waits."
-            )
-        },
-        {
-            "name": "Warm and Deceptive",
-            "description": (
-                "A rare warm spell has people shedding their coats, but the warmth feels almost wrong, like a con man’s smile. "
-                "It lulls you into a false sense of security, and only the wise keep their wits sharp, knowing a storm is never far behind."
-            )
-        },
-        {
-            "name": "Starless Night",
-            "description": (
-                "The sky is pitch-black, not a star to be seen, and the usual city lights seem dimmer than usual. "
-                "It’s the kind of night when people disappear, swallowed by darkness, and even the bravest avoid the unlit alleys."
-            )
-        }
-    ]
-
-    # Select a random weather event
-    selected_event = random.choice(events)
-    print(f"Weather Event: {selected_event['name']}")
-    print(f"Description: {selected_event['description']}")
-
 def random_weather_event():
 
 
