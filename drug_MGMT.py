@@ -37,16 +37,16 @@ class Drugs:
             print(f"Description: {drug['description']}")
             print(f"Base Value Range: {drug['base_value_range']}")
             print("=" * 100)
+def print_drug_price_test():
+    # Accessing a random drug and generating its price
+    x = random.randint(0, 4)  # Randomly choose an index between 0 and 4
+    newdrug = Drugs.drug_database[x]  # Select the drug based on the random index
 
-# Accessing a random drug and generating its price
-x = random.randint(0, 4)  # Randomly choose an index between 0 and 4
-newdrug = Drugs.drug_database[x]  # Select the drug based on the random index
+    # Generating a random price within the base value range
+    newdrug_price = random.randint(newdrug['base_value_range'][0], newdrug['base_value_range'][1])
 
-# Generating a random price within the base value range
-newdrug_price = random.randint(newdrug['base_value_range'][0], newdrug['base_value_range'][1])
+    # Printing the result
+    print(f"{newdrug['name']} price: ${newdrug_price}")
 
-# Printing the result
-print(f"{newdrug['name']} price: ${newdrug_price}")
-
-# Optionally, print all drugs
-# Drugs.print_all()  # Uncomment this line if you want to print all drug details
+    # Optionally, print all drugs
+    # Drugs.print_all()  # Uncomment this line if you want to print all drug details
