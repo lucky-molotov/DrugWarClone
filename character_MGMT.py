@@ -34,7 +34,7 @@ class PlayerCharacter:
             return  character
         except KeyError as e:
             raise KeyError(f"Missing key in name_database: {e}")
-
+## needs to refactored
     def view_character(character):
         character_view = f"Name: {character.name}\nNickname: {character.nickname}\nAge: {character.age}"
         return character_view
