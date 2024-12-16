@@ -1,4 +1,4 @@
-import character_MGMT,time,sys,game_test
+import character_MGMT,time,sys,game_loop
 def main_menu():
     """
     Displays the main menu of the game, allowing the user to interact with the game or exit.
@@ -162,7 +162,7 @@ def new_game():
     """
     try:
         loanshark = character_MGMT.npc.create_npc("loan shark")
-        game_test.new_game(player_character,loanshark)
+        game_loop.new_game(player_character,loanshark)
     except AttributeError:
         print("Please create a character first.")
         main_menu()
